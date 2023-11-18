@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/global.css" />
+    <title>Relogio</title>
+</head>
+<body>
+    
+    <main class="hero">
+        <div class="container">
+            <div class="clock">
+                <span id="hrs">00</span>
+                <span>:</span>
+                <span id="min">00</span>
+                <span>:</span>
+                <span id="sec">00</span>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let hrs = document.getElementById('hrs')
+        let min = document.getElementById('min')
+        let sec = document.getElementById('sec')
+
+        setInterval( () => {
+
+            let currentTime = new Date()
+
+            hrs.innerHTML = currentTime.getHours()
+            min.innerHTML = currentTime.getMinutes()
+            sec.innerHTML = currentTime.getSeconds()
+
+        }, 1000 )
+    </script>
+</body>
+</html>
